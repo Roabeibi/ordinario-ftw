@@ -8,6 +8,8 @@ public class HomeController : Controller
 {
     public static List<Comentario> listaComentarios = new List<Comentario>();
 
+    public static List<Vehiculo> listaVehiculos = new List<Vehiculo>();
+
     public IActionResult Index()
     {
         return View();
@@ -34,6 +36,25 @@ public class HomeController : Controller
         listaComentarios.Add(comentario);
 
         return RedirectToAction("Comentarios");
+    }
+
+    public IActionResult Vehiculos()
+    {
+        return View(listaVehiculos);
+    }
+
+    [HttpPost]
+    public IActionResult GuardarVehiculo(string placa, string modelo, string color)
+    {
+        Vehiculo vehiculo = new Vehiculo();
+
+        vehiculo.Placa = placa;
+        vehiculo.Modelo = modelo;
+        vehiculo.Color = color;
+
+        listaVehiculos.Add(vehiculo);
+
+        return RedirectToAction("Vehiculos");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

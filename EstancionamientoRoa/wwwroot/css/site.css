@@ -73,3 +73,15 @@ button {
     padding: 30px;
     margin-top: 30px;
 }
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+th {
+    background-color: lightgray;
+}
+
+th, td {
+    padding: 10px;
+}
