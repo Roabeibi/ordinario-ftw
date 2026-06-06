@@ -60,16 +60,16 @@ td {
     text-decoration: underline;
 }
 input, textarea {
-    width: 300px;
-    padding: 5px;
+    width: 1000px;
+    padding: 60px;
 }
 
 button {
-    padding: 8px;
+    padding: 20px;
 }
 
 .comentario {
     background-color: #eaeaea;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 30px;
+    margin-top: 30px;
 }

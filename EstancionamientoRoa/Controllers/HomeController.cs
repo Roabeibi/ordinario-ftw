@@ -36,7 +36,6 @@ public class HomeController : Controller
         return RedirectToAction("Comentarios");
     }
 
-    // Página error
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
