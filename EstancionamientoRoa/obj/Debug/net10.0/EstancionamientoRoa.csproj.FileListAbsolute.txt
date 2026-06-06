@@ -22,7 +22,6 @@ C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\ob
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\scopedcss\bundle\EstancionamientoRoa.styles.css
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\scopedcss\projectbundle\EstancionamientoRoa.bundle.scp.css
-C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ib4d9t8hap-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\zgkezhts99-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\a7a66v58eu-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\6dy01biljn-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -96,3 +95,4 @@ C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\ob
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\EstancionamientoRoa.pdb
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\EstancionamientoRoa.genruntimeconfig.cache
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\ref\EstancionamientoRoa.dll
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ib4d9t8hap-{0}-eup7etwby7-eup7etwby7.gz

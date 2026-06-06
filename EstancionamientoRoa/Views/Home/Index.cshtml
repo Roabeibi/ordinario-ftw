@@ -1,8 +1,39 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="contenedor">
+
+    <h1>Estacionamiento</h1>
+    <hr>
+    <h2>Espacios</h2>
+    <p>Total de lugares: 50</p>
+    <p>Ocupados: 32</p>
+    <p>Disponibles: 18</p>
+    <br>
+    <h2>Autos registrados</h2>
+    <table border="1">
+        <tr>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Hora</th>
+        </tr>
+        <tr>
+            <td>ABC-123</td>
+            <td>Nissan</td>
+            <td>08:30 AM</td>
+        </tr>
+        <tr>
+            <td>XYZ-456</td>
+            <td>Toyota</td>
+            <td>09:15 AM</td>
+        </tr>
+        <tr>
+            <td>JKL-789</td>
+            <td>Honda</td>
+            <td>10:00 AM</td>
+        </tr>
+    </table>
 </div>
