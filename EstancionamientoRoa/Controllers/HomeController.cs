@@ -10,6 +10,8 @@ public class HomeController : Controller
 
     public static List<Vehiculo> listaVehiculos = new List<Vehiculo>();
 
+    public static List<Entrada> listaEntradas = new List<Entrada>();
+
     public IActionResult Index()
     {
         return View();
@@ -57,6 +59,25 @@ public class HomeController : Controller
         return RedirectToAction("Vehiculos");
     }
 
+    public IActionResult Entradas()
+    {
+        return View(listaEntradas);
+    }
+
+    [HttpPost]
+    public IActionResult GuardarEntrada(string placa, string horaEntrada, string lugar)
+    {
+        Entrada entrada = new Entrada();
+
+        entrada.Placa = placa;
+        entrada.HoraEntrada = horaEntrada;
+        entrada.Lugar = lugar;
+
+        listaEntradas.Add(entrada);
+
+        return RedirectToAction("Entradas");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
@@ -65,4 +86,10 @@ public class HomeController : Controller
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
         });
     }
+    public IActionResult Login()
+{
+    return View();
+
+}
+
 }

@@ -1,0 +1,10 @@
+<usuarios>
+    <usuario>
+        <nombre>admin</nombre>
+        <password>1234</password>
+    </usuario>
+    <usuario>
+        <nombre>alumno</nombre>
+        <password>abcd</password>
+    </usuario>
+</usuarios>
