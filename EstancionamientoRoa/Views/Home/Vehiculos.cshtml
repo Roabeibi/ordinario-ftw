@@ -26,8 +26,17 @@
     </form>
     <hr>
     <h2>Lista de vehiculos</h2>
-    <table border="1">
-        <tr>
+    <h2>Buscar vehículo</h2>
+//Buscar
+<input type="text"
+       id="buscarVehiculo"
+       placeholder="Buscar por placa">
+<button onclick="filtrarVehiculos()">
+    Buscar
+</button>
+<br>
+<br>
+<table border="1" id="tablaVehiculos">        <tr>
             <th>Placa</th>
             <th>Modelo</th>
             <th>Collor</th>
@@ -42,3 +51,4 @@
         }
     </table>
 </div>
+<script src="~/js/vehiculos.js"></script>
