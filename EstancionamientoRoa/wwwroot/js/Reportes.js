@@ -1,13 +1,48 @@
-function filtrarReportes() {
-    let input = document.getElementById("buscarReporte");
-    let filtro = input.value.toLowerCase();
-    let tabla = document.getElementsByTagName("table")[0];
-    let filas = tabla.getElementsByTagName("tr");
-    for (let i = 1; i < filas.length; i++) {
-        let celda = filas[i].getElementsByTagName("td")[0];
-        if (celda) {
-        let texto = celda.textContent || celda.innerText;
-            if (texto.toLowerCase().indexOf(filtro) > -1) {
-                filas[i].style.display = "";} else {
+async function cargarVehiculos(){
+let filtro=document
+.getElementById("buscarVehiculo")
+.value
+.toLowerCase();
+let respuesta=await fetch("/xml/vehiculos.xml");
+let texto=await respuesta.text();
+let parser=new DOMParser();
+let xml=parser.parseFromString(texto,"text/xml");
+let vehiculos=xml.getElementsByTagName("vehiculo");
+let tabla=document.getElementById("tablaVehiculos");
+tabla.innerHTML=`
+<tr>
+<th>Placa</th>
+<th>Modelo</th>
+<th>Color</th>
+</tr>
+`;
 
-                filas[i].style.display = "none";} }}}
+for(let i=0;i<vehiculos.length;i++){
+
+let placa=vehiculos[i]
+.getElementsByTagName("placa")[0]
+.textContent;
+
+let modelo=vehiculos[i]
+.getElementsByTagName("modelo")[0]
+.textContent;
+
+let color=vehiculos[i]
+.getElementsByTagName("color")[0]
+.textContent;
+
+if(placa.toLowerCase().includes(filtro)){
+
+tabla.innerHTML+=`
+<tr>
+<td>${placa}</td>
+<td>${modelo}</td>
+<td>${color}</td>
+</tr>
+`;
+
+}
+
+}
+
+}

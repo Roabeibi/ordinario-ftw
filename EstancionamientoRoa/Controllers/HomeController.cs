@@ -11,9 +11,22 @@ public class HomeController : Controller{
     public static List<Entrada> listaEntradas = new List<Entrada>();
 //   salidas
     public static List<Salida> listaSalidas = new List<Salida>();
+
+    public static bool logueado=false;
 //  principal
-    public IActionResult Index(){
-    return View();}
+    public IActionResult Index()
+{
+if(!logueado)
+{
+return RedirectToAction("Index","Login");
+}
+return View();
+}
+//  S
+public IActionResult Dashboard()
+{
+    return View();
+}
 //  privacidad
     public IActionResult Privacy(){
         return View();}

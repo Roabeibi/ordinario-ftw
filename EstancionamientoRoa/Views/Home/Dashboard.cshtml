@@ -1,28 +1,18 @@
-﻿@{
-ViewData["Title"]="Dashboard";
-}
-
+@{ViewData["Title"]="Dashboard";}
 <div class="contenedor">
-
-<h1>Dashboard Estacionamiento</h1>
-
+<h1>Dashboard del Estacionamiento</h1>
 <div class="cards">
-
 <div class="card">
 <p>Entradas</p>
 <p>@EstancionamientoRoa.Controllers.HomeController.listaEntradas.Count</p>
 </div>
-
 <div class="card">
 <p>Salidas</p>
 <p>@EstancionamientoRoa.Controllers.HomeController.listaSalidas.Count</p>
 </div>
-
 <div class="card">
 <p>Vehiculos</p>
 <p>@EstancionamientoRoa.Controllers.HomeController.listaVehiculos.Count</p>
 </div>
-
 </div>
-
 </div>
