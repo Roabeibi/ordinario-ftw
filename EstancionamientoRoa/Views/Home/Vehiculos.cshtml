@@ -7,11 +7,11 @@ ViewData["Title"]="Vehiculos";
 
 <div class="contenedor">
 <h1>Vehiculos registrados</h1>
-<p>
-Lista de vehiculos registrados desde entradas.
-</p>
-<input type="text" id="buscarVehiculo" placeholder="Buscar placa">
-<button onclick="filtrarVehiculos()">
+
+<input type="text" id="buscarVehiculo">
+
+<button type="button"
+onclick="filtrarTabla('buscarVehiculo','tablaVehiculos')">
 Buscar
 </button>
 <br>
@@ -34,3 +34,4 @@ Buscar
 </div>
 
 <script src="~/js/vehiculos.js"></script>
+<script src="~/js/filtrado.js"></script>

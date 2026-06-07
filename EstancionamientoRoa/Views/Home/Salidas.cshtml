@@ -27,7 +27,9 @@
 </form>
 <hr>
 <h2>Lista de salidas</h2>
-<table border="1">
+<input type="text" id="buscarSalida" placeholder="Buscar">
+<button onclick="filtrarTabla('buscarSalida','tablaSalidas')">Buscar</button>
+<table border="1" id="tablaSalidas">
 <tr>
 <th>Placa</th>
 <th>Hora</th>
@@ -41,3 +43,4 @@
 </tr>}
 </table>
 </div>
+<script src="~/js/filtrado.js"></script>

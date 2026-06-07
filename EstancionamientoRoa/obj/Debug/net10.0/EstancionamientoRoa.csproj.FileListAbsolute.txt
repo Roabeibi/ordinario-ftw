@@ -100,3 +100,4 @@ C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\ob
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\y943u7kenl-{0}-nz60ndx7p8-nz60ndx7p8.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\c8mxd8ckqp-{0}-nkk0t8zbcj-nkk0t8zbcj.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ib4d9t8hap-{0}-ftaiwhgmf7-ftaiwhgmf7.gz
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\z17whupjo4-{0}-vbe6ml64uf-vbe6ml64uf.gz

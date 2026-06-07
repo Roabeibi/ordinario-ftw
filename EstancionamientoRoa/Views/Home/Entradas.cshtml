@@ -26,14 +26,15 @@ Vehiculos para registrar
 <p>Lugar</p>
 <input type="text" name="lugar" id="lugar" required>
 <p id="errorLugar"></p>
->
 <button type="submit">
 Guardar entrada
 </button>
 </form>
 <hr>
 <h2>Vehiculos entrando</h2>
-<table border="1">
+<input type="text" id="buscarEntrada" placeholder="Buscar">
+<button onclick="filtrarTabla('buscarEntrada','tablaEntradas')">Buscar</button>
+<table border="1" id="tablaEntradas">
 <tr>
 <th>Placa</th>
 <th>Modelo</th>
@@ -52,3 +53,4 @@ Guardar entrada
 </table>
 </div>
 <script src="~/js/entradas.js"></script>
+<script src="~/js/filtrado.js"></script>

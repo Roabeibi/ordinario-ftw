@@ -9,6 +9,12 @@
     </p>
     <hr>
     <h2>Reportes</h2>
+    <input type="text" id="buscarReporte">
+
+<button type="button"
+onclick="filtrarTabla('buscarReporte','tablaReportes')">
+Buscar
+</button>
 <table border="1" id="tablaReportes">        <tr>
             <th>Informaciom</th>
             <th>Cantidad</th>
@@ -34,3 +40,4 @@
 </button>
 </div>
 <script src="~/js/reportes.js"></script>
+<script src="~/js/filtrado.js"></script>

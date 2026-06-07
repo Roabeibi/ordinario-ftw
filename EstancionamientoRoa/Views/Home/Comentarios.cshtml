@@ -6,6 +6,12 @@
 <link rel="stylesheet" href="~/css/site.css" />
 
 <div class="contenedor">
+<input type="text" id="buscarComentario">
+
+<button type="button"
+onclick="filtrarTabla('buscarComentario','tablaComentarios')">
+Buscar
+</button>
     <h1>Comentarios</h1>
     <form method="post" asp-action="GuardarComentario">
         <p>Nombre</p>
@@ -20,11 +26,20 @@
     </form>
     <hr>
     <h2>Comentarios guardados</h2>
-    @foreach (var comentario in Model)
-    {
-        <div class="comentario">
-            <strong>@comentario.Nombre</strong>
-            <p>@comentario.Mensaje</p>
-        </div>
-    }
+ <table id="tablaComentarios" border="1">
+
+<tr>
+<th>Nombre</th>
+<th>Comentario</th>
+</tr>
+
+@foreach (var comentario in Model)
+{
+<tr>
+<td>@comentario.Nombre</td>
+<td>@comentario.Mensaje</td>
+</tr>
+}
+
+</table>
 </div>
