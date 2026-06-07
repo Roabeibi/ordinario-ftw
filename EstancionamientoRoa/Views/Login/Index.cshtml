@@ -1,10 +1,22 @@
-@{
-ViewData["Title"]="Login";
+@if (Context.Session.GetString("logueado") == "true")
+{
+    <p style="color:blue;">
+        Ya estás logueado. Ve al <a asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+    </p>
+}@{
+ViewData["Title"] = "Login";
 }
 
 <div class="contenedor">
 
 <h1>Login</h1>
+
+@if (TempData["msg"] != null)
+{
+    <div style="color:green;">
+        @TempData["msg"]
+    </div>
+}
 
 <form method="post">
 
@@ -26,4 +38,4 @@ ViewData["Title"]="Login";
 @ViewBag.Error
 </p>
 
-</div>  
+</div>

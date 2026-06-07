@@ -25,6 +25,11 @@ return View();
 //  S
 public IActionResult Dashboard()
 {
+    if (HttpContext.Session.GetString("logueado") != "true")
+    {
+        return RedirectToAction("Index", "Login");
+    }
+
     return View();
 }
 //  privacidad
