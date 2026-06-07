@@ -101,3 +101,11 @@ C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\ob
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\c8mxd8ckqp-{0}-nkk0t8zbcj-nkk0t8zbcj.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ib4d9t8hap-{0}-ftaiwhgmf7-ftaiwhgmf7.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\z17whupjo4-{0}-vbe6ml64uf-vbe6ml64uf.gz
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\EstancionamientoRoa.csproj.AssemblyReference.cache
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\DnsClient.dll
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\MongoDB.Bson.dll
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\MongoDB.Driver.dll
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\SharpCompress.dll
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\Snappier.dll
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\ZstdSharp.dll
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\Estancio.700746DB.Up2Date

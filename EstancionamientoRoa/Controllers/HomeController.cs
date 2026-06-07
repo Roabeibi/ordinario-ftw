@@ -1,18 +1,24 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using EstancionamientoRoa.Data;
+using MongoDB.Driver;
 using EstancionamientoRoa.Models;
 namespace EstancionamientoRoa.Controllers;
-public class HomeController : Controller{
-//comentarios
-    public static List<Comentario> listaComentarios = new List<Comentario>();
-//  vehículos
-    public static List<Vehiculo> listaVehiculos = new List<Vehiculo>();
-//  entradas
-    public static List<Entrada> listaEntradas = new List<Entrada>();
-//   salidas
-    public static List<Salida> listaSalidas = new List<Salida>();
+public class HomeController : Controller
+{
 
-    public static bool logueado=false;
+MongoDBContext db = new MongoDBContext();
+
+//comentarios
+public static List<Comentario> listaComentarios = new List<Comentario>();
+//vehiculos
+public static List<Vehiculo> listaVehiculos = new List<Vehiculo>();
+//entradas
+public static List<Entrada> listaEntradas = new List<Entrada>();
+//salidas
+public static List<Salida> listaSalidas = new List<Salida>();
+public static bool logueado=false;
+
 //  principal
     public IActionResult Index()
 {
@@ -48,8 +54,13 @@ public IActionResult GuardarComentario(string nombre, string mensaje){
         listaComentarios.Add(comentario);
         return RedirectToAction("Comentarios");}
 //  vehículos
-    public IActionResult Vehiculos(){
-        return View(listaVehiculos);}
+public IActionResult Vehiculos()
+{
+
+var lista =
+db.Vehiculos.Find(_ => true).ToList();
+return View(lista);
+}
 //  vehículo
     [HttpPost]
     public IActionResult GuardarVehiculo(string placa, string modelo, string color){
@@ -58,8 +69,7 @@ public IActionResult GuardarComentario(string nombre, string mensaje){
         vehiculo.Modelo = modelo;
         vehiculo.Color = color;
 
-        listaVehiculos.Add(vehiculo);
-
+db.Vehiculos.InsertOne(vehiculo);
         return RedirectToAction("Vehiculos");}
 
  //  entradas
