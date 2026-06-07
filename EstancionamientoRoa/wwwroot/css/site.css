@@ -1,135 +1,160 @@
+/* Ncesite ayuda pro para mejorar la vista del sitio */
 body{
 font-family:Arial;
 background-color:#f2f2f2;
-margin:20px;
+margin:0;
+padding:0;
 }
 
+/* CONTENEDOR */
 .contenedor{
-background-color:white;
+background-color:#FFFFFF;
 padding:20px;
+margin:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* TITULOS */
 h1{
-color:darkblue;
+color:#18529D;
+margin-bottom:10px;
 }
 
+/* CARDS */
 .cards{
-margin-top:40px;
+margin-top:30px;
+display:flex;
+gap:15px;
 }
 
 .card{
-background-color:#eaeaea;
-padding:10px;
-margin-bottom:20px;
+background-color:#FFFFFF;
+border:2px solid #18529D;
+padding:15px;
+flex:1;
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
 .card p{
-font-size:40px;
+font-size:35px;
+font-weight:bold;
+color:#18529D;
 }
 
-.tabla{
-margin-top:50px;
-}
-
+/* TABLAS */
 table{
 width:100%;
-background-color:white;
+background-color:#FFFFFF;
 margin-top:20px;
 border-collapse:collapse;
+border-radius:10px;
+overflow:hidden;
 }
 
 th{
-background-color:lightgray;
+background-color:#18529D;
+color:#FFFFFF;
 padding:10px;
 }
 
 td{
 padding:10px;
+border:1px solid #ddd;
 }
 
-th,td{
-border:1px solid gray;
-}
-
+/* TOPBAR */
 .topbar{
-background-color:darkblue;
+background-color:#18529D;
 padding:15px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .topbar a{
-color:white;
+color:#FFFFFF;
 text-decoration:none;
-margin-right:20px;
-font-size:18px;
+font-size:16px;
+padding:6px 10px;
+border-radius:5px;
 }
 
 .topbar a:hover{
-text-decoration:underline;
+background-color:#28AD56;
+color:#FFFFFF;
 }
 
+/* INPUTS */
 input,textarea,select{
 width:300px;
 padding:8px;
+border:1px solid #18529D;
+border-radius:5px;
+margin-top:5px;
 }
 
+/* BOTONES */
 button{
-padding:10px;
-background-color:darkblue;
-color:white;
+padding:10px 15px;
+background-color:#28AD56;
+color:#FFFFFF;
 border:none;
+border-radius:5px;
+cursor:pointer;
 }
 
 button:hover{
-background-color:blue;
+background-color:#18529D;
 }
 
+/* COMENTARIOS */
 .comentario{
-background-color:#eaeaea;
-padding:20px;
-margin-top:20px;
+background-color:#FFFFFF;
+border-left:5px solid #28AD56;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
 }
 
+/* LOGIN */
 .login-box{
-background-color:white;
+background-color:#FFFFFF;
 padding:20px;
 width:300px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+border-top:5px solid #18529D;
 }
 
+/* IMAGENES */
 img{
 margin-top:10px;
-border:2px solid gray;
+border-radius:10px;
+max-width:100%;
+border:2px solid #18529D;
 }
 
-main{
-padding:20px;
-}
-
+/* RESPONSIVE */
 @media screen and (max-width:700px){
 
-.topbar a{
-display:block;
-margin-top:10px;
-}
-
 .cards{
-display:block;
+flex-direction:column;
 }
 
-.card{
-margin-top:10px;
+.topbar{
+flex-direction:column;
+}
+
+input,textarea,select{
+width:100%;
 }
 
 table{
 font-size:12px;
-}
-
-input,textarea,select{
-width:100%;
-}
-
-img{
-width:100%;
-height:auto;
 }
 
 }
