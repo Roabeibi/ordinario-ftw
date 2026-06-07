@@ -1,110 +1,110 @@
-body {
-    font-family: Arial;
-    background-color: #f2f2f2;
-    margin: 20px;
+body{
+font-family:Arial;
+background-color:#f2f2f2;
+margin:20px;
 }
 
-.contenedor {
-    background-color: white;
-    padding: 20px;
+.contenedor{
+background-color:white;
+padding:20px;
 }
 
-h1 {
-    color: darkblue;
+h1{
+color:darkblue;
 }
 
-.cards {
-    margin-top: 40px;
+.cards{
+margin-top:40px;
 }
 
-.card {
-    background-color: #eaeaea;
-    padding: 10px;
-    margin-bottom: 20px;
+.card{
+background-color:#eaeaea;
+padding:10px;
+margin-bottom:20px;
 }
 
-.card p {
-    font-size: 50px;
+.card p{
+font-size:40px;
 }
 
-.tabla {
-    margin-top: 50px;
+.tabla{
+margin-top:50px;
 }
 
-table {
-    width: 100%;
-    background-color: white;
+table{
+width:100%;
+background-color:white;
+margin-top:20px;
+border-collapse:collapse;
 }
 
-th {
-    background-color: lightgray;
-    padding: 10px;
+th{
+background-color:lightgray;
+padding:10px;
 }
 
-td {
-    padding: 10px;
-}
-.topbar {
-    background-color: darkblue;
-    padding: 15px;
+td{
+padding:10px;
 }
 
-.topbar a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 18px;
+th,td{
+border:1px solid gray;
 }
 
-.topbar a:hover {
-    text-decoration: underline;
-}
-input, textarea {
-    width: 1000px;
-    padding: 60px;
+.topbar{
+background-color:darkblue;
+padding:15px;
 }
 
-button {
-    padding: 20px;
+.topbar a{
+color:white;
+text-decoration:none;
+margin-right:20px;
+font-size:18px;
 }
 
-.comentario {
-    background-color: #eaeaea;
-    padding: 30px;
-    margin-top: 30px;
-}
-table {
-    width: 100%;
-    margin-top: 20px;
+.topbar a:hover{
+text-decoration:underline;
 }
 
-th {
-    background-color: lightgray;
+input,textarea,select{
+width:300px;
+padding:8px;
 }
 
-th, td {
-    padding: 10px;
-}
-.login-box {
-    background-color: white;
-    padding: 20px;
-    width: 300px;
+button{
+padding:10px;
+background-color:darkblue;
+color:white;
+border:none;
 }
 
-input {
-    width: 100%;
-    padding: 5px;
+button:hover{
+background-color:blue;
 }
 
-
-
-
-
-main {
-    padding: 20px;
+.comentario{
+background-color:#eaeaea;
+padding:20px;
+margin-top:20px;
 }
 
-@media screen and (max-width: 700px){
+.login-box{
+background-color:white;
+padding:20px;
+width:300px;
+}
+
+img{
+margin-top:10px;
+border:2px solid gray;
+}
+
+main{
+padding:20px;
+}
+
+@media screen and (max-width:700px){
 
 .topbar a{
 display:block;
@@ -123,8 +123,13 @@ table{
 font-size:12px;
 }
 
-input{
+input,textarea,select{
 width:100%;
+}
+
+img{
+width:100%;
+height:auto;
 }
 
 }
