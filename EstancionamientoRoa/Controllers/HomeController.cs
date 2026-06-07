@@ -84,7 +84,14 @@ public IActionResult Reportes()
 {
     return View();
 }
-// error
+
+    //horario
+    public IActionResult Horario()
+    {
+        return View();
+    }
+
+    //error
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
@@ -92,4 +99,5 @@ public IActionResult Reportes()
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
         });
-    }}
+    }
+}
