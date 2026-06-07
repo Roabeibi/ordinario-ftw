@@ -50,11 +50,12 @@ public IActionResult GuardarComentario(string nombre, string mensaje){
 
 //  entrada
     [HttpPost]
-    public IActionResult GuardarEntrada(string placa, string horaEntrada, string lugar)
+public IActionResult GuardarEntrada(string placa,string modelo,string horaEntrada,string lugar)
     {
         Entrada entrada = new Entrada();
 
         entrada.Placa = placa;
+        entrada.Modelo=modelo;
         entrada.HoraEntrada = horaEntrada;
         entrada.Lugar = lugar;
         listaEntradas.Add(entrada);

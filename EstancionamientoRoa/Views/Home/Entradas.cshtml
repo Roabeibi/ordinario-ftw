@@ -1,48 +1,54 @@
 @model List<EstancionamientoRoa.Models.Entrada>
 
 @{
-    ViewData["Title"] = "Entradas";
+ViewData["Title"]="Entradas";
 }
 
 <link rel="stylesheet" href="~/css/site.css" />
-
 <div class="contenedor">
+<h1>Entradas</h1>
+<p>
+Aqui se registran los vehiculos que entran al estacionamiento.
+</p>
+<form method="post" asp-action="GuardarEntrada" onsubmit="return validarEntrada()">
+<p>Placa</p>
+<input type="text" name="placa" id="placa" required>
+<p id="errorPlaca"></p>
+<br>
+<p>Modelo</p>
+<input type="text" name="modelo" id="modelo" required>
+<p id="errorModelo"></p>
+<br>
+<p>Hora de entrada</p>
+<input type="text" name="horaEntrada" id="horaEntrada" required>
+<p id="errorHora"></p>
+<br>
+<p>Lugar</p>
+<input type="text" name="lugar" id="lugar" required>
+<p id="errorLugar"></p>
+>
+<button type="submit">
+Guardar entrada
+</button>
+</form>
+<hr>
+<h2>Vehiculos entrando</h2>
+<table border="1">
+<tr>
+<th>Placa</th>
+<th>Modelo</th>
+<th>Hora</th>
+<th>Lugar</th>
+</tr>
 
-    <h1>Entradas</h1>
-
-    <form method="post" asp-action="GuardarEntrada">
-
-        <p>Placa</p>
-
-        <input type="text" name="placa" required />
-
-        <br>
-       <br>
-
-        <p>Hora e entrada</p>
-        <input type="text" name="horaEntrada" required />
-        <br>
-        <br>
-        <p>Lugar</p>
-        <input type="text" name="lugar" required />
-        <br>
-        <br>      <button type="submit">Guardar</button>
-    </form>
-    <hr>
-    <h2>Lista de entradas</h2>
-    <table border="1">
-        <tr>
-            <th>Placa</th>
-            <th>Hora</th>
-            <th>Lugar</th>
-        </tr>
-        @foreach (var entrada in Model)
-        {
-            <tr>
-                <td>@entrada.Placa</td>
-                <td>@entrada.HoraEntrada</td>
-                <td>@entrada.Lugar</td>
-            </tr>
-        }
-    </table>
+@foreach(var entrada in Model)
+{
+<tr>
+<td>@entrada.Placa</td>
+<td>@entrada.Modelo</td>
+<td>@entrada.HoraEntrada</td>
+<td>@entrada.Lugar</td>
+</tr>}
+</table>
 </div>
+<script src="~/js/entradas.js"></script>
