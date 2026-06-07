@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Reportes";}
+<link rel="stylesheet" href="~/css/site.css" />
+<div class="contenedor">
+
+    <h1>Reportes</h1>
+    <p>
+        Esta página muestra información general del sistema.
+    </p>
+    <hr>
+    <h2>Reporte de vehículos</h2>
+<table border="1" id="tablaReportes">        <tr>
+            <th>Informaciom</th>
+            <th>Cantidad</th>
+        </tr>
+        <tr>
+            <td>Vehiculos registrados</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Entradas registradas</td>
+            <td>10</td>
+        </tr><tr>
+            <td>Salidas registradas</td>
+            <td>8</td>
+        </tr></table>
+    <br>
+    <h2>Buscar reporte</h2>
+    <input type="text"
+           id="buscarReporte"
+           placeholder="Buscar dato">
+    <button onclick="filtrarReportes()">
+        Buscar
+</button>
+</div>
+<script src="~/js/reportes.js"></script>

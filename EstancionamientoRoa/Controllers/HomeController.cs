@@ -78,6 +78,11 @@ public IActionResult GuardarComentario(string nombre, string mensaje){
 //  login
     public IActionResult Login(){
         return View();}
+
+public IActionResult Reportes()
+{
+    return View();
+}
 // error
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
@@ -86,5 +91,4 @@ public IActionResult GuardarComentario(string nombre, string mensaje){
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
         });
-    }
-}
+    }}
