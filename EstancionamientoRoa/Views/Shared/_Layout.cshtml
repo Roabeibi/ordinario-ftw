@@ -19,6 +19,7 @@
 
 @if (Context.Session.GetString("logueado") == "true")
 {
+
     <a asp-controller="Home" asp-action="Dashboard">Dashboard</a>
         <a asp-controller="Home" asp-action="Vehiculos">Vehiculos</a>
     <a asp-controller="Home" asp-action="Entradas">Entradas</a>
@@ -26,7 +27,7 @@
     <a asp-controller="Home" asp-action="Comentarios">Comentarios</a>
 <a asp-controller="Reportes" asp-action="Index">Reportes</a>
     <a asp-controller="Home" asp-action="Horario">Horario</a>
-
+<a asp-controller="Logout" asp-action="Index">Salir</a>
 }
 else
 {

@@ -1,6 +1,9 @@
+@model List<EstancionamientoRoa.Models.Vehiculo>
 @{ViewData["Title"]="Dashboard";}
 <div class="contenedor">
 <h1>Dashboard del Estacionamiento</h1>
+<p>Hora actual: @ViewBag.HoraActual</p>
+<hr>
 <div class="cards">
 <div class="card">
 <p>Entradas</p>
@@ -12,7 +15,25 @@
 </div>
 <div class="card">
 <p>Vehiculos</p>
-<p>@EstancionamientoRoa.Controllers.HomeController.listaVehiculos.Count</p>
+<p>@Model.Count</p>
 </div>
 </div>
+<hr>
+<h2>Vehículos registrados</h2>
+<table>
+<tr>
+<th>Placa</th>
+<th>Modelo</th>
+</tr>
+@foreach(var v in Model)
+{
+<tr>
+<td>@v.Placa</td>
+<td>@v.Modelo</td>
+</tr>}</table>
+<hr>
+<h2>Playlist</h2>
+<a href="https://www.youtube.com/watch?v=XyhA3ZEiYOU&list=RDXyhA3ZEiYOU&start_radio=1" target="_blank">
+Click on hereeeeee for bad bunny ouyea
+</a>
 </div>

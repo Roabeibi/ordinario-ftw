@@ -25,12 +25,13 @@ return View();
 //  S
 public IActionResult Dashboard()
 {
-    if (HttpContext.Session.GetString("logueado") != "true")
-    {
-        return RedirectToAction("Index", "Login");
-    }
+if(HttpContext.Session.GetString("logueado") != "true")
+{
+return RedirectToAction("Index","Login");
+}
 
-    return View();
+ViewBag.HoraActual = DateTime.Now.ToString("HH:mm:ss");
+return View(listaVehiculos);
 }
 //  privacidad
     public IActionResult Privacy(){
