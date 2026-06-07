@@ -97,6 +97,6 @@ C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\ob
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\ref\EstancionamientoRoa.dll
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\78zaygey9v-{0}-aho3vhpnaj-aho3vhpnaj.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\y943u7kenl-{0}-q6wbygs3f8-q6wbygs3f8.gz
-C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ib4d9t8hap-{0}-zpvxzj5hlf-zpvxzj5hlf.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ql0xynrqai-{0}-w6h7f9krx8-w6h7f9krx8.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\c8mxd8ckqp-{0}-36r5r6w65i-36r5r6w65i.gz
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ib4d9t8hap-{0}-ne7xq47l4j-ne7xq47l4j.gz
