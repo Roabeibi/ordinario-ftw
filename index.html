@@ -1,10 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>ordinario-ftw</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>
+Sistema de Estacionamiento
+</title>
+<style>
+body{
+font-family:Arial;
+background-color:#f2f2f2;
+margin:0;
+padding:0;
+color:#333;
+}
+header{
+background-color:#18529D;
+color:white;
+padding:30px;
+text-align:center;
+}
+header h1{
+margin:0;
+font-size:40px;
+}
+header p{
+font-size:20px;
+margin-top:10px;
+}
+.contenedor{
+padding:40px;
+max-width:1200px;
+margin:auto;
+}
+.card{
+background-color:white;
+padding:30px;
+margin-bottom:30px;
+border-radius:15px;
+box-shadow:0px 2px 10px gray;
+}
+h2{
+color:#18529D;
+}
+.galeria{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:20px;
+}
+.galeria img{
+width:350px;
+max-width:100%;
+border-radius:10px;
+box-shadow:0px 2px 10px gray;
+transition:0.3s;
+}
+.galeria img:hover{
+transform:scale(1.03);
+}
+.lista{
+line-height:35px;
+font-size:18px;
+}
+.boton{
+display:inline-block;
+padding:15px 25px;
+background-color:#28AD56;
+color:white;
+text-decoration:none;
+border-radius:10px;
+margin-top:20px;
+font-size:18px;
+}
+.boton:hover{
+background-color:#18529D;
+}
+footer{
+background-color:#18529D;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+iframe{
+width:100%;
+max-width:800px;
+height:400px;
+border-radius:10px;
+margin-top:20px;
+}
+@media screen and (max-width:700px){
+header h1{
+font-size:28px;
+}
+.card{
+padding:20px;
+}
+}
+
+</style>
 </head>
 <body>
-    <h1>Proyecto ordinario-ftw</h1>
-    <p>Repositorio publicado correctamente.</p>
+<header>
+<h1>
+Sistema de Estacionamiento
+</h1>
+<p>
+Proyecto desarrollado con ASP.NET Core MVC
+</p>
+</header>
+<div class="contenedor">
+<div class="card">
+<h2>
+Introducción
+</h2>
+<p>
+Este proyecto consiste en un sistema web para la
+administración y control de un estacionamiento.
+Permite registrar vehículos, gestionar entradas
+y salidas, controlar espacios disponibles,
+visualizar estadísticas dinámicas y generar
+reportes en tiempo real.
+</p>
+</div>
+<div class="card">
+<h2>
+Tecnologías utilizadas
+</h2>
+<ul class="lista">
+<li>ASP.NET Core MVC</li>
+<li>C#</li>
+<li>MongoDB</li>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+<li>GitHub Pages</li>
+<li>XML</li>
+<li>Responsive Design</li>
+</ul>
+</div>
+<div class="card">
+<h2>
+Funcionalidades principales
+</h2>
+<ul class="lista">
+<li>Login con validación XML</li>
+<li>Dashboard dinámico</li>
+<li>Registro de vehículos</li>
+<li>Control de entradas y salidas</li>
+<li>Asignación automática de lugares</li>
+<li>Filtros dinámicos con JavaScript</li>
+<li>Reportes y estadísticas</li>
+<li>Hora automática en tiempo real</li>
+<li>Diseño responsivo</li>
+<li>Base de datos MongoDB</li>
+</ul>
+</div>
+<div class="card">
+<h2>
+Capturas del sistema
+</h2>
+<div class="galeria">
+<img src="dashboard.png"
+alt="Dashboard del sistema">
+<img src="dashboard2.png"
+alt="Pantalla de login">
+
+<img src="Vehiculos.png"
+alt="Módulo de reportes">
+<img src="Entradas.png"
+alt="Pantalla de login">
+
+<img src="Entradas2.png"
+alt="Módulo de reportes">
+<img src="Salidas.png"
+alt="Pantalla de login">
+
+<img src="Comentarios.png"
+alt="Módulo de reportes">
+
+<img src="Reportes.png"
+alt="Módulo de reportes">
+<img src="Horarios1.png"
+alt="Módulo de reportes">
+<img src="Horarios2.png"
+alt="Módulo de reportes">
+
+<img src="Login.png"
+alt="Módulo de reportes">
+</div>
+</div>
+<div class="card">
+<h2>
+Video del proyecto
+</h2>
+<p>
+Demostración funcional del sistema.
+</p>
+<iframe
+src="https://youtu.be/SIe9CJlTaTw"
+title="Video del proyecto"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="card">
+<h2>
+Repositorio GitHub
+</h2>
+<p>
+Puedes consultar el código fuente completo del
+proyecto en GitHub
+</p>
+<a class="boton"
+href="https://github.com/Roabeibi/ordinario-ftw"
+target="_blank">
+Ver repositorio
+</a>
+</div>
+</div>
+<footer>
+<p>
+Proyecto desarrollado para la experiencia educativa
+de Desarrollo de Aplicaciones Web
+</p>
+</footer>
 </body>
-</html>ls
+</html>
