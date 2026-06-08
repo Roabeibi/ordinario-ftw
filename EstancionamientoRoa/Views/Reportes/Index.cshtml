@@ -1,37 +1,48 @@
-@{
-ViewData["Title"]="Reportes";
-}
-
-<div class="contenedor">
-
-<h1>Reportes</h1>
+<h1>Reportes Dinámicos</h1>
 
 <table>
+<tr><th>Concepto</th><th>Valor</th></tr>
 <tr>
-<th>Dato</th>
-<th>Cantidad</th>
-</tr>
-
-<tr>
-<td>Vehículos</td>
+<td>Vehículos registrados</td>
 <td>@ViewBag.TotalVehiculos</td>
 </tr>
-
 <tr>
-<td>Entradas</td>
+<td>Entradas registradas</td>
 <td>@ViewBag.TotalEntradas</td>
 </tr>
-
 <tr>
-<td>Salidas</td>
+<td>Salidas registradas</td>
 <td>@ViewBag.TotalSalidas</td>
 </tr>
-
 <tr>
-<td>Ingresos</td>
+<td>Ingresos totales</td>
 <td>$@ViewBag.IngresoTotal</td>
 </tr>
-
+<tr>
+<td>Promedio movimientos</td>
+<td>@ViewBag.PromedioMovimientos</td>
+</tr>
 </table>
+<div class="cards">
 
+<div class="card">
+<h3>Total Entradas</h3>
+<p>@ViewBag.TotalEntradas</p>
+</div>
+<div class="card">
+<h3>Total Salidas</h3>
+<p>@ViewBag.TotalSalidas</p>
+</div>
+<div class="card">
+<h3>Ingreso Total</h3>
+<p>$@ViewBag.IngresoTotal</p>
+</div>
+<div class="card">
+<h3>Vehículos Dentro</h3>
+<p>@ViewBag.VehiculosDentro</p>
+</div>
+<div class="card">
+<h3>Ocupación</h3>
+<p>@ViewBag.Ocupacion %</p>
+</div>
 </div>

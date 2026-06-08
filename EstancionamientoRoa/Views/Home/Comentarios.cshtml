@@ -1,11 +1,6 @@
 @model List<EstancionamientoRoa.Models.Comentario>
-
-@{
-    ViewData["Title"] = "Comentarios";
-}
+@{ViewData["Title"] = "Comentarios";}
 <link rel="stylesheet" href="~/css/site.css" />
-
-
 
     <h1>Comentarios</h1>
     <form method="post" asp-action="GuardarComentario">
@@ -22,19 +17,15 @@
     <hr>
     <h2>Comentarios guardados</h2>
  <table id="tablaComentarios" border="1">
-
 <tr>
 <th>Nombre</th>
 <th>Comentario</th>
 </tr>
-
 @foreach (var comentario in Model)
 {
 <tr>
 <td>@comentario.Nombre</td>
 <td>@comentario.Mensaje</td>
-</tr>
-}
-
+</tr>}
 </table>
 </div>

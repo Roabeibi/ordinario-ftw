@@ -99,7 +99,6 @@ C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\ob
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ql0xynrqai-{0}-rewv6h1dl5-rewv6h1dl5.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\y943u7kenl-{0}-nz60ndx7p8-nz60ndx7p8.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\c8mxd8ckqp-{0}-nkk0t8zbcj-nkk0t8zbcj.gz
-C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ib4d9t8hap-{0}-ftaiwhgmf7-ftaiwhgmf7.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\z17whupjo4-{0}-vbe6ml64uf-vbe6ml64uf.gz
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\EstancionamientoRoa.csproj.AssemblyReference.cache
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\DnsClient.dll
@@ -109,3 +108,4 @@ C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bi
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\Snappier.dll
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\bin\Debug\net10.0\ZstdSharp.dll
 C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\Estancio.700746DB.Up2Date
+C:\Users\equor\OneDrive\Escritorio\UV\40270\ordinario-ftw\EstancionamientoRoa\obj\Debug\net10.0\compressed\ib4d9t8hap-{0}-zxmh36rt3h-zxmh36rt3h.gz

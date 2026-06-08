@@ -1,39 +1,128 @@
 @model List<EstancionamientoRoa.Models.Vehiculo>
-@{ViewData["Title"]="Dashboard";}
+
+@{
+ViewData["Title"]="Dashboard";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+
 <div class="contenedor">
+
 <h1>Dashboard del Estacionamiento</h1>
-<p>Hora actual: @ViewBag.HoraActual</p>
+
+<div class="dashboard-info">
+
+<p>
+Hora actual
+<span id="horaActual">
+@ViewBag.HoraActual
+</span>
+</p>
+
+<p>
+Fecha
+@DateTime.Now.ToString("dd/MM/yyyy")
+</p>
+</div>
 <hr>
 <div class="cards">
 <div class="card">
-<p>Entradas</p>
-<p>@EstancionamientoRoa.Controllers.HomeController.listaEntradas.Count</p>
+<h3>Entradas</h3>
+<p>
+@EstancionamientoRoa.Controllers.HomeController.listaEntradas.Count
+</p>
 </div>
 <div class="card">
-<p>Salidas</p>
-<p>@EstancionamientoRoa.Controllers.HomeController.listaSalidas.Count</p>
+<h3>Salidas</h3>
+<p>
+@EstancionamientoRoa.Controllers.HomeController.listaSalidas.Count
+</p>
 </div>
 <div class="card">
-<p>Vehiculos</p>
-<p>@Model.Count</p>
+<h3>Ingresos</h3>
+<p>
+$
+@(EstancionamientoRoa.Controllers.HomeController.listaSalidas.Count * 20)
+</p>
+</div>
+<div class="card">
+<h3>Lugares disponibles</h3>
+<p>
+@(50 - EstancionamientoRoa.Controllers.HomeController.listaEntradas.Count)
+</p>
+</div>
+<div class="card">
+<h3>Ocupacion</h3>
+<p>
+@(
+(
+EstancionamientoRoa.Controllers.HomeController.listaEntradas.Count
+* 100
+) / 50
+)
+%
+</p>
 </div>
 </div>
 <hr>
-<h2>Vehículos registrados</h2>
-<table>
+<br>
+<br>
+<table id="tablaDashboard">
 <tr>
 <th>Placa</th>
 <th>Modelo</th>
+<th>Estado</th>
 </tr>
 @foreach(var v in Model)
 {
 <tr>
 <td>@v.Placa</td>
 <td>@v.Modelo</td>
-</tr>}</table>
+<td>
+Registrado
+</td>
+</tr>
+}
+</table>
 <hr>
-<h2>Playlist</h2>
-<a href="https://www.youtube.com/watch?v=XyhA3ZEiYOU&list=RDXyhA3ZEiYOU&start_radio=1" target="_blank">
-Click on hereeeeee for bad bunny ouyea
-</a>
+<h2>Actividad</h2>
+<div class="comentario">
+<p>
+Última actualización del sistema
+@DateTime.Now.ToString("HH:mm:ss")
+</p>
+<p>
+Vehiculos activos
+@EstancionamientoRoa.Controllers.HomeController.listaEntradas.Count
+</p>
+
+<p>
+Salidas registradas
+@EstancionamientoRoa.Controllers.HomeController.listaSalidas.Count
+</p>
+
 </div>
+<hr>
+
+<h2>Musica</h2>
+<p>
+Lista de reproducción 
+</p>
+
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/O1VCapoztgI"
+title="YouTube"
+allowfullscreen>
+</iframe>
+</div>
+<script src="~/js/filtrado.js"></script>
+<script>
+function actualizarHora()
+{
+let ahora = new Date();
+document.getElementById("horaActual").innerHTML =
+ahora.toLocaleTimeString();
+}
+setInterval(actualizarHora,1000);
+</script>

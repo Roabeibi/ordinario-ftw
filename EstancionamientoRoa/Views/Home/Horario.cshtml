@@ -1,58 +1,102 @@
-@{
-ViewData["Title"]="Horario";
-}
+@{ViewData["Title"]="Horario";}
 <link rel="stylesheet" href="~/css/site.css" />
 <div class="contenedor">
-<h1>Horario del estacionamiento</h1>
-<h2>
-horarios
-</h2>
+<h1>Horario del Estacionamiento</h1>
+<div class="card-horario">
+<h2>Estado actual</h2>
+<p id="estado"></p>
+<p>
+Hora actual
+<span id="horaActual"></span>
+</p>
 
-<table border="1">
-
+</div>
+<h2>Horarios</h2>
+<table>
 <tr>
-<th>Dia</th>
+<th>Día</th>
 <th>Horario</th>
 </tr>
-
 <tr>
 <td>Lunes</td>
-<td>7 AM - 9 PM</td>
+<td>7:00 AM - 9:00 PM</td>
 </tr>
-
 <tr>
 <td>Martes</td>
-<td>7 AM - 9 PM</td>
+<td>7:00 AM - 9:00 PM</td>
 </tr>
-
 <tr>
-<td>Miercoles</td>
-<td>7 AM - 9 PM</td>
+<td>Miércoles</td>
+<td>7:00 AM - 9:00 PM</td>
 </tr>
-
 <tr>
-<td>Juves</td>
-<td>7 am - 9 pm</td>
+<td>Jueves</td>
+<td>7:00 AM - 9:00 PM</td>
 </tr>
-
 <tr>
 <td>Viernes</td>
-<td>7 am - 9 pm</td>
+<td>7:00 AM - 9:00 PM</td>
 </tr>
-
 <tr>
-<td>Sabado</td>
-<td>8 am - 6 pm</td>
+<td>Sábado</td>
+<td>8:00 AM - 6:00 PM</td>
 </tr>
 <tr>
 <td>Domingo</td>
 <td>Cerrado</td>
 </tr>
 </table>
-<r>
-
-<h2>Imagenes del estacionamiento</h2>
-<img src="~/img/parking.jpg" height="300">
-<img src="~/img/parking2.jpg" width="300">
-<img src="~/img/parking3.jpg" width="300">
+<br>
+<div class="info-box">
 </div>
+<h2>Fotos del estacionamiento</h2>
+<div class="galeria">
+<img src="~/img/parking.jpg"
+alt="">
+<img src="~/img/parking2.jpg"
+alt="">
+</div>
+</div>
+<script>
+function actualizarHora()
+{
+let ahora = new Date();
+let hora =
+ahora.toLocaleTimeString();
+document.getElementById("horaActual").innerHTML =
+hora;
+let dia = ahora.getDay();
+let horas = ahora.getHours();
+let abierto = false;
+if(dia >= 1 && dia <= 5)
+{
+if(horas >= 7 && horas < 21)
+{
+abierto = true;
+}
+}
+if(dia == 6)
+{
+if(horas >= 8 && horas < 18)
+{
+abierto = true;
+}
+}
+if(abierto)
+{
+document.getElementById("estado").innerHTML =
+"🟢 Abierto";
+document.getElementById("estado").style.color =
+"#28AD56";
+}
+else
+{
+document.getElementById("estado").innerHTML =
+"🔴 Cerradisimo";
+document.getElementById("estado").style.color =
+"red";
+}
+}
+actualizarHora();
+setInterval(actualizarHora,1000);
+</script>

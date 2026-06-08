@@ -3,44 +3,91 @@
 @{ViewData["Title"]="Salidas";}
 <link rel="stylesheet" href="~/css/site.css" />
 <div class="contenedor">
-<h1>Salidas</h1>
 <form method="post" asp-action="GuardarSalida">
 <p>Placa</p>
-<select name="placa" id="placa">
-@foreach(var entrada in HomeController.listaEntradas)
+<select name="placa"
+id="placa"
+onchange="mostrarLugar()"
+required>
+<option value="">
+Seleccione placa
+</option>
+@foreach(var entrada in ViewBag.EntradasActivas)
 {
-<option value="@entrada.Placa">
+<option
+value="@entrada.Placa"
+data-lugar="@entrada.Lugar">
 @entrada.Placa
-</option>}
+</option>
+}
 </select>
 <br>
 <br>
+<p>Lugar asignado</p>
+<input type="text"
+id="lugar"
+readonly>
+<br>
 <p>Hora de salida</p>
-<input type="text" name="horaSalida" id="horaSalida" required>
-<br>
-<br>
-<p>Pago</p>
-<input type="text" name="pago" id="pago" required>
-<br>
-<br>
-<button type="submit">Guardar</button>
+<input type="text"
+name="horaSalida"
+id="horaSalida"
+readonly>
+<button type="submit">
+Guardar salida
+</button>
 </form>
 <hr>
-<h2>Lista de salidas</h2>
-<input type="text" id="buscarSalida" placeholder="Buscar">
-<button onclick="filtrarTabla('buscarSalida','tablaSalidas')">Buscar</button>
-<table border="1" id="tablaSalidas">
+<h2>Buscar salida</h2>
+<input type="text"
+id="buscarSalida">
+<button type="button"
+onclick="filtrarTabla('buscarSalida','tablaSalidas')">
+Buscar
+</button>
+<br>
+<br>
+<table id="tablaSalidas">
 <tr>
 <th>Placa</th>
-<th>Hora</th>
-<th>Pago</th>
+<th>Hora salida</th>
 </tr>
-@foreach(var salida in Model){
+@foreach(var salida in Model)
+{
 <tr>
 <td>@salida.Placa</td>
 <td>@salida.HoraSalida</td>
-<td>@salida.Pago</td>
-</tr>}
+</tr>
+}
 </table>
 </div>
 <script src="~/js/filtrado.js"></script>
+<script>
+
+function mostrarLugar()
+{
+let select =
+document.getElementById("placa");
+let opcion =
+select.options[select.selectedIndex];
+let lugar =
+opcion.getAttribute("data-lugar");
+document.getElementById("lugar").value =
+lugar;
+}
+
+function actualizarHora()
+{
+let ahora = new Date();
+let horas =
+String(ahora.getHours()).padStart(2,'0');
+let minutos =
+String(ahora.getMinutes()).padStart(2,'0');
+let segundos =
+String(ahora.getSeconds()).padStart(2,'0');
+document.getElementById("horaSalida").value =
+horas + ":" + minutos + ":" + segundos;
+}
+actualizarHora();
+setInterval(actualizarHora,1000);
+</script>

@@ -1,8 +1,7 @@
 @model List<EstancionamientoRoa.Models.Entrada>
 
 @{
-ViewData["Title"]="Entradas";
-}
+ViewData["Title"]="Entradas";}
 
 <link rel="stylesheet" href="~/css/site.css" />
 <div class="contenedor">
@@ -20,11 +19,20 @@ Vehiculos para registrar
 <p id="errorModelo"></p>
 <br>
 <p>Hora de entrada</p>
-<input type="text" name="horaEntrada" id="horaEntrada" required>
-<p id="errorHora"></p>
+<input type="text"
+name="horaEntrada"
+id="horaEntrada"
+readonly>
 <br>
 <p>Lugar</p>
-<input type="text" name="lugar" id="lugar" required>
+<select name="lugar" id="lugar" required>
+@foreach(var lugar in ViewBag.Lugares)
+{
+<option value="@lugar">
+@lugar
+</option>
+}
+</select>
 <p id="errorLugar"></p>
 <button type="submit">
 Guardar entrada
@@ -52,5 +60,21 @@ Guardar entrada
 </tr>}
 </table>
 </div>
+
+<script>
+function actualizarHora()
+{
+let ahora = new Date();
+let horas =
+String(ahora.getHours()).padStart(2,'0');
+let minutos =
+String(ahora.getMinutes()).padStart(2,'0');
+let segundos =
+String(ahora.getSeconds()).padStart(2,'0');
+document.getElementById("horaEntrada").value =
+horas + ":" + minutos + ":" + segundos;}
+actualizarHora();
+setInterval(actualizarHora,1000);
+</script>
 <script src="~/js/entradas.js"></script>
 <script src="~/js/filtrado.js"></script>

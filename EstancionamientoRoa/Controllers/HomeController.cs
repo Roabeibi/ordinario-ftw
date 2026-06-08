@@ -6,9 +6,7 @@ using EstancionamientoRoa.Models;
 namespace EstancionamientoRoa.Controllers;
 public class HomeController : Controller
 {
-
 MongoDBContext db = new MongoDBContext();
-
 //comentarios
 public static List<Comentario> listaComentarios = new List<Comentario>();
 //vehiculos
@@ -18,7 +16,6 @@ public static List<Entrada> listaEntradas = new List<Entrada>();
 //salidas
 public static List<Salida> listaSalidas = new List<Salida>();
 public static bool logueado=false;
-
 //  principal
     public IActionResult Index()
 {
@@ -54,35 +51,43 @@ public IActionResult GuardarComentario(string nombre, string mensaje){
         listaComentarios.Add(comentario);
         return RedirectToAction("Comentarios");}
 //  vehículos
-public IActionResult Vehiculos()
-{
-
+public IActionResult Vehiculos(){
 var lista =
 db.Vehiculos.Find(_ => true).ToList();
 return View(lista);
 }
-//  vehículo
+//  vehiculo
     [HttpPost]
     public IActionResult GuardarVehiculo(string placa, string modelo, string color){
         Vehiculo vehiculo = new Vehiculo();
         vehiculo.Placa = placa;
         vehiculo.Modelo = modelo;
         vehiculo.Color = color;
-
 db.Vehiculos.InsertOne(vehiculo);
         return RedirectToAction("Vehiculos");}
-
  //  entradas
-    public IActionResult Entradas()
-    {
-        return View(listaEntradas);}
-
+public IActionResult Entradas()
+{
+List<string> lugares = new List<string>()
+{
+"A1",
+"A2",
+"A3",
+"A4",
+"A5",
+"B1",
+"B2",
+"B3"
+};
+foreach(var entrada in listaEntradas){
+lugares.Remove(entrada.Lugar);}
+ViewBag.Lugares = lugares;
+return View(listaEntradas);}
 //  entrada
     [HttpPost]
 public IActionResult GuardarEntrada(string placa,string modelo,string horaEntrada,string lugar)
     {
         Entrada entrada = new Entrada();
-
         entrada.Placa = placa;
         entrada.Modelo=modelo;
         entrada.HoraEntrada = horaEntrada;
@@ -90,36 +95,45 @@ public IActionResult GuardarEntrada(string placa,string modelo,string horaEntrad
         listaEntradas.Add(entrada);
         return RedirectToAction("Entradas");}
 //  salidas
-    public IActionResult Salidas(){
-        return View(listaSalidas);}
+public IActionResult Salidas()
+{
+ViewBag.EntradasActivas = listaEntradas;
+return View(listaSalidas);
+}
 //  salida
-    [HttpPost]
-    public IActionResult GuardarSalida(string placa, string horaSalida, string pago)
-    {
-        Salida salida = new Salida();
+   [HttpPost]
+public IActionResult GuardarSalida(
+string placa,
+string horaSalida,
+string pago){
+Salida salida = new Salida();
+salida.Placa = placa;
+salida.HoraSalida = horaSalida;
+salida.Pago = pago;
+listaSalidas.Add(salida);
 
-        salida.Placa = placa;
-        salida.HoraSalida = horaSalida;
-        salida.Pago = pago;
-
-        listaSalidas.Add(salida);
-
-        return RedirectToAction("Salidas");}
+var entrada =
+listaEntradas.FirstOrDefault(
+x => x.Placa == placa);
+//si existe
+if(entrada != null)
+{
+listaEntradas.Remove(entrada);
+}
+return RedirectToAction("Salidas");
+}
 //  login
     public IActionResult Login(){
         return View();}
-
 public IActionResult Reportes()
 {
     return View();
 }
-
     //horario
     public IActionResult Horario()
     {
         return View();
     }
-
     //error
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
@@ -127,6 +141,4 @@ public IActionResult Reportes()
         return View(new ErrorViewModel
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-        });
-    }
-}
+        });}}

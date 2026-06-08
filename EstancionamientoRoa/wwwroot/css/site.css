@@ -157,4 +157,27 @@ table{
 font-size:12px;
 }
 
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background-color:white;
+border-left:8px solid #28AD56;
+padding:20px;
+width:250px;
+box-shadow:0px 2px 5px gray;
+border-radius:10px;
+}
+
+.card h3{
+color:#18529D;
+}
+
+.card p{
+font-size:30px;
+font-weight:bold;
+}
 }

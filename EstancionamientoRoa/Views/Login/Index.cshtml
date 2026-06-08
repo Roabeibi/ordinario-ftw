@@ -1,41 +1,30 @@
 @if (Context.Session.GetString("logueado") == "true")
 {
     <p style="color:blue;">
-        Ya estás logueado. Ve al <a asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+        Sigue <a asp-controller="Home" asp-action="Dashboard">Dashboard</a>
     </p>
-}@{
-ViewData["Title"] = "Login";
-}
-
+}@{ViewData["Title"] = "Login";}
 <div class="contenedor">
-
 <h1>Login</h1>
-
 @if (TempData["msg"] != null)
 {
     <div style="color:green;">
         @TempData["msg"]
     </div>
 }
-
 <form method="post">
-
 <p>Usuario</p>
 <input type="text" name="usuario">
-
 <br><br>
-
 <p>Password</p>
 <input type="password" name="password">
-
 <br><br>
-
 <button type="submit">Entrar</button>
-
 </form>
-
 <p style="color:red;">
 @ViewBag.Error
 </p>
-
+<div class="login-imagen">
+<img src="~/img/login.png"
+alt="Imagen del estacionamiento">
 </div>

@@ -1,15 +1,9 @@
 @using EstancionamientoRoa.Controllers
-
-@{
-ViewData["Title"]="Vehiculos";
-}
+@{ViewData["Title"]="Vehiculos";}
 <link rel="stylesheet" href="~/css/site.css" />
-
 <div class="contenedor">
 <h1>Vehiculos registrados</h1>
-
 <input type="text" id="buscarVehiculo">
-
 <button type="button"
 onclick="filtrarTabla('buscarVehiculo','tablaVehiculos')">
 Buscar
@@ -28,10 +22,7 @@ Buscar
 <td>@entrada.Modelo</td>
 <td>@entrada.Lugar</td>
 </tr>}
-
 </table>
-
 </div>
-
 <script src="~/js/vehiculos.js"></script>
 <script src="~/js/filtrado.js"></script>
