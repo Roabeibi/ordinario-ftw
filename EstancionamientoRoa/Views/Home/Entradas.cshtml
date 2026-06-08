@@ -11,7 +11,12 @@ Vehiculos para registrar
 </p>
 <form method="post" asp-action="GuardarEntrada" onsubmit="return validarEntrada()">
 <p>Placa</p>
-<input type="text" name="placa" id="placa" required>
+<input type="text"
+name="placa"
+id="placa"
+style="text-transform:uppercase;"
+oninput="this.value=this.value.toUpperCase()"
+required>
 <p id="errorPlaca"></p>
 <br>
 <p>Modelo</p>

@@ -68,21 +68,37 @@ db.Vehiculos.InsertOne(vehiculo);
  //  entradas
 public IActionResult Entradas()
 {
-List<string> lugares = new List<string>()
+List<string> lugares = new List<string>();
+
+for(int i = 1; i <= 10; i++)
 {
-"A1",
-"A2",
-"A3",
-"A4",
-"A5",
-"B1",
-"B2",
-"B3"
-};
-foreach(var entrada in listaEntradas){
-lugares.Remove(entrada.Lugar);}
+lugares.Add("A" + i);
+}
+
+for(int i = 1; i <= 10; i++)
+{
+lugares.Add("B" + i);
+}
+for(int i = 1; i <= 10; i++)
+{
+lugares.Add("C" + i);
+}
+for(int i = 1; i <= 10; i++)
+{
+lugares.Add("D" + i);
+}
+for(int i = 1; i <= 10; i++)
+{
+lugares.Add("E" + i);
+}
+
+foreach(var entrada in listaEntradas)
+{
+lugares.Remove(entrada.Lugar);
+}
 ViewBag.Lugares = lugares;
-return View(listaEntradas);}
+return View(listaEntradas);
+}
 //  entrada
     [HttpPost]
 public IActionResult GuardarEntrada(string placa,string modelo,string horaEntrada,string lugar)

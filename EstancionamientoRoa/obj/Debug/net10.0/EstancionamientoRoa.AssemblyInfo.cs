@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstancionamientoRoa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99a1e135561579129bbfea993609f0d062881a1f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75e397cc4138cd43a83a08c6edbb9f16627667b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstancionamientoRoa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstancionamientoRoa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
